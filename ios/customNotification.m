@@ -6,3 +6,9 @@
 //
 
 #import <Foundation/Foundation.h>
+#import <React/RCTBridge.h>
+
+@interface RCT_EXTERN_MODULE(customNotification, NSObject)
+
+RCT_EXTERN_METHOD(MyNotification:(NSString *)param)
+@end

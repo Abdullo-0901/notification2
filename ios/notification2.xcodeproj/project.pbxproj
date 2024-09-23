@@ -15,6 +15,9 @@
 		7699B88040F8A987B510C191 /* libPods-notification2-notification2Tests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 19F6CBCC0A4E27FBF8BF4A61 /* libPods-notification2-notification2Tests.a */; };
 		81AB9BB82411601600AC10FF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */; };
 		874E332D2083C318F9CEC7EE /* PrivacyInfo.xcprivacy in Resources */ = {isa = PBXBuildFile; fileRef = C01A2343886C2892D105B520 /* PrivacyInfo.xcprivacy */; };
+		B83D4BD12C9EF39F0092C43E /* customNotification.m in Sources */ = {isa = PBXBuildFile; fileRef = B83D4BD02C9EF39F0092C43E /* customNotification.m */; };
+		B83D4BD42C9EF4D30092C43E /* customNotification.swift in Sources */ = {isa = PBXBuildFile; fileRef = B83D4BD32C9EF4D30092C43E /* customNotification.swift */; };
+		B83D4BD62CA048ED0092C43E /* callcitNotificationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B83D4BD52CA048ED0092C43E /* callcitNotificationController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -45,7 +48,11 @@
 		5DCACB8F33CDC322A6C60F78 /* libPods-notification2.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-notification2.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = LaunchScreen.storyboard; path = notification2/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		89C6BE57DB24E9ADA2F236DE /* Pods-notification2-notification2Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-notification2-notification2Tests.release.xcconfig"; path = "Target Support Files/Pods-notification2-notification2Tests/Pods-notification2-notification2Tests.release.xcconfig"; sourceTree = "<group>"; };
-		C01A2343886C2892D105B520 /* PrivacyInfo.xcprivacy */ = {isa = PBXFileReference; includeInIndex = 1; name = PrivacyInfo.xcprivacy; path = notification2/PrivacyInfo.xcprivacy; sourceTree = "<group>"; };
+		B83D4BD02C9EF39F0092C43E /* customNotification.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = customNotification.m; sourceTree = "<group>"; };
+		B83D4BD22C9EF4D20092C43E /* notification2-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "notification2-Bridging-Header.h"; sourceTree = "<group>"; };
+		B83D4BD32C9EF4D30092C43E /* customNotification.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = customNotification.swift; sourceTree = "<group>"; };
+		B83D4BD52CA048ED0092C43E /* callcitNotificationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = callcitNotificationController.swift; sourceTree = "<group>"; };
+		C01A2343886C2892D105B520 /* PrivacyInfo.xcprivacy */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xml; name = PrivacyInfo.xcprivacy; path = notification2/PrivacyInfo.xcprivacy; sourceTree = "<group>"; };
 		ED297162215061F000B7C4FE /* JavaScriptCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JavaScriptCore.framework; path = System/Library/Frameworks/JavaScriptCore.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
@@ -97,6 +104,10 @@
 				13B07FB71A68108700A75B9A /* main.m */,
 				13B07FB81A68108700A75B9A /* PrivacyInfo.xcprivacy */,
 				C01A2343886C2892D105B520 /* PrivacyInfo.xcprivacy */,
+				B83D4BD02C9EF39F0092C43E /* customNotification.m */,
+				B83D4BD32C9EF4D30092C43E /* customNotification.swift */,
+				B83D4BD22C9EF4D20092C43E /* notification2-Bridging-Header.h */,
+				B83D4BD52CA048ED0092C43E /* callcitNotificationController.swift */,
 			);
 			name = notification2;
 			sourceTree = "<group>";
@@ -211,7 +222,7 @@
 						TestTargetID = 13B07F861A680F5B00A75B9A;
 					};
 					13B07F861A680F5B00A75B9A = {
-						LastSwiftMigration = 1120;
+						LastSwiftMigration = 1540;
 					};
 				};
 			};
@@ -398,8 +409,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B83D4BD62CA048ED0092C43E /* callcitNotificationController.swift in Sources */,
 				13B07FBC1A68108700A75B9A /* AppDelegate.mm in Sources */,
+				B83D4BD42C9EF4D30092C43E /* customNotification.swift in Sources */,
 				13B07FC11A68108700A75B9A /* main.m in Sources */,
+				B83D4BD12C9EF39F0092C43E /* customNotification.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -418,6 +432,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 5B7EB9410499542E8C5724F5 /* Pods-notification2-notification2Tests.debug.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					"DEBUG=1",
@@ -445,6 +460,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 89C6BE57DB24E9ADA2F236DE /* Pods-notification2-notification2Tests.release.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				COPY_PHASE_STRIP = NO;
 				INFOPLIST_FILE = notification2Tests/Info.plist;
@@ -486,6 +502,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "org.reactjs.native.example.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = notification2;
+				SWIFT_OBJC_BRIDGING_HEADER = "notification2-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				VERSIONING_SYSTEM = "apple-generic";
@@ -512,6 +529,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "org.reactjs.native.example.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = notification2;
+				SWIFT_OBJC_BRIDGING_HEADER = "notification2-Bridging-Header.h";
 				SWIFT_VERSION = 5.0;
 				VERSIONING_SYSTEM = "apple-generic";
 			};
@@ -590,10 +608,7 @@
 					"-DFOLLY_CFG_NO_COROUTINES=1",
 					"-DFOLLY_HAVE_CLOCK_GETTIME=1",
 				);
-				OTHER_LDFLAGS = (
-					"$(inherited)",
-					" ",
-				);
+				OTHER_LDFLAGS = "$(inherited)  ";
 				REACT_NATIVE_PATH = "${PODS_ROOT}/../../node_modules/react-native";
 				SDKROOT = iphoneos;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) DEBUG";
@@ -666,10 +681,7 @@
 					"-DFOLLY_CFG_NO_COROUTINES=1",
 					"-DFOLLY_HAVE_CLOCK_GETTIME=1",
 				);
-				OTHER_LDFLAGS = (
-					"$(inherited)",
-					" ",
-				);
+				OTHER_LDFLAGS = "$(inherited)  ";
 				REACT_NATIVE_PATH = "${PODS_ROOT}/../../node_modules/react-native";
 				SDKROOT = iphoneos;
 				USE_HERMES = true;

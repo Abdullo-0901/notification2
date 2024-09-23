@@ -4,6 +4,9 @@
 <dict>
 	<key>CFBundleDevelopmentRegion</key>
 	<string>en</string>
+	<key>NSMicrophoneUsageDescription</key>
+    <string>This app requires access to the microphone for calls.</string> 
+
 	<key>CFBundleDisplayName</key>
 	<string>notification2</string>
 	<key>CFBundleExecutable</key>
